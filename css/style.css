@@ -1,0 +1,113 @@
+/*Обнуление css стилей*/
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+*,*:before,*::after{
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+:focus,:active{outline:none;}
+a:focus,a:active{outline: none;}
+
+nav,footer, header, aside{display: block;}
+
+html, body{
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea{font-family: inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding: 0; border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size:inherit; font-weight: 400;}
+
+
+.example-block{
+    /*
+    padding - внутренний отступ блочных тегов
+    применяется только к блочным тегам
+    сверху справа снизу слева
+    можно писать в процентах (от всей ширины экрана)
+    */
+    padding: 5px;
+
+    /*
+    margin - внешний отступ блочных тегов
+    могут быть отрицательные значения
+    можно писать в процентах (от всей ширины экрана)
+    */
+    margin: 10px;
+
+    /*
+    width - ширина блочных и некоторых (img) строчных тегов
+    width: 500px;
+
+    ШИРИНА ВКЛЮЧАЕТ В СЕБЯ PADDIG И BORDER, НО НЕ ВКЛЮЧАЕТ MARGIN
+
+    max-width - максимальная ширина блочных и некоторых строчных тегов
+    при увеличении окна браузера блок останется 500pх, но при уменьшении будет 
+    следовать за окном браузера
+    не работает для строчных тегов
+    max-width: 500px;
+   
+    пропорционально уменьшается до определенного размера,
+    а потом обрезается
+    min-width: 500px;
+    */
+    
+
+    /*высота блочных и некоторых строчных (img) тегов
+    можно в процентах
+    height: 50%;
+    max-height: 200px;  выйдет за границы блока, залезет на нижний контент
+    min-heightn: 200px;  будет нормально увеличиваться
+    */
+    
+    /*
+    overflow: visible;
+    max-height: 50px;
+    
+    visible - текст выходит за границы блока и перекрывает контент ниже
+    hidden - текст обрезватеся до max-height (скрывается)
+    scroll - текст прокручивается, добавляется вертикальный и горизонтальный скролл
+    auto - скроллы появляются только когда нужны
+    */
+
+    /*определяет как элемент будет показан на дисплее
+    display:block ; преваращает строчный блок в блочный
+    display: inline; преваращает блочный блок в строчный
+    display: none; временно удаляет элемент из документа и страница его не видит */
+    border: 1px solid #000; 
+}
+
+.example-img{
+
+    /*
+    display: inline-block; блочно-строчный тег, не растягивается на всю ширину экрана
+    как блочный тег, но на него действуют св-ва width и height и др.*/
+
+
+    /*картинка уменьшается, но не увеличится больше 500рх*/
+    width: 100%;
+    max-width: 500px;
+    /*картинка пропорционально уменьшается до определенного размера,
+    а потом обрезается
+    min-width: 500px;*/
+}
